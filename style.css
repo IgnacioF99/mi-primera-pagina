@@ -1,0 +1,213 @@
+body{
+    background: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    
+}
+/*Aqui le damos un fondo negro con altura de 60px a la barra del menu*/
+.container-nav {
+    display: flex;
+    padding: 10px;
+    height: 60px;
+    background-color: black;
+}
+/*Aqui hacemos que opcupe el 100% del ancho de la pagina y vemos donde poner el contenido
+en este caso tenemos "mi pagina web" y la lista de opciones, son solo dos objetos*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+/*Aqui centramos "Mi pagina web" en terminos de altura, agregamos color y quitamos el subrayo del html*/
+.brand {
+    display: flex;
+    align-items: center;
+    color: greenyellow;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+li>a {
+    padding: 8px 24px;
+}
+
+/*Agrega el color blanco a las listas del menu y le quita las decoraciones, que en este caso tenia subrallados ya que son links*/
+.listaDeMenu {
+    color: greenyellow;
+    text-decoration: none;
+}
+
+/*Agrega el felx a los link y los centra con respecto a altura*/
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+/*Oculta el botton de menu*/
+.button-menu-toggle {
+    display: none;
+}
+
+/*Agregamos media query a la pagina*/
+@media (max-width: 768px) {
+    /*Hacemos que los textos de la clase column sean adaptables a pantallas pequenias*/
+    .column {
+        flex: 100%;
+    }
+    /*Ocultamos la lista de links para poder ocupar el botton de menu mas tarde*/
+    .nav-links {
+        display: none;
+    }
+
+    .button-menu-toggle {
+        /*Como dijimos anteriormente, en pantallas pequenias usaremos el menu, con este
+        display block lo habilitamos*/
+        display: block;
+        background-color: greenyellow;
+        /*quitamos el borde por cuestion estetica, casi ni se notaba*/
+        border: none;
+        /*Quitamos las puntas por estetica para dejar un boton circular*/
+        border-radius: 50px;
+        /*Dejamos un margen de 24 px en derecha e izquierda para un boton mas vistoso*/
+        padding: 0 24px;
+        /*Le damos personalidad a las letras*/
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    /*Se escribe dos veces ya que se toma como boton de entrada y cierre*/
+    .nav-links.nav-links-responsive {
+        /*hace que el menu desplasable ocupe toda la pantalla*/
+        position: absolute;
+        display: flex;
+        /*El fondo es negro*/
+        background-color: rgba(20,20,20,0.95);
+        /*Ocupar toda la*/
+        width: 100%;
+        height: 100%;
+        /*Deja un margen de 70px arriba*/
+        top: 40px;
+        left: 0;
+        /*Acomoda el felx en forma de columna*/
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+        font-size: 40px;
+        list-style-type: none;
+        /*Centro las columas ya que el aling center no funciona*/
+        padding: 15% 0px 0px 0px;
+
+    }
+    .imagenes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+h1{
+    color: #ffffff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    margin: 40px;
+    color: whitesmoke;
+
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: aliceblue;
+    font-size: 18px;
+    margin: 20px;
+
+}
+.image{
+    text-align: center;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(27, 27, 50, 0.8);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+.column {  
+    flex: 1;
+    padding: 10px;
+}
+.imagenes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.seccion1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.seccion1 > h2 {
+    margin: 0px;
+
+}
+.seccion2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.seccion2 > h2 {
+    margin-bottom: 0px;
+}
+.seccion2 > div {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+}
+#texto {
+    width: 40%;
+    height: 40%;
+}
+footer {
+    background-color: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7));
+    padding: 20px;
+    text-align: center;
+}
+footer > button {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 16px
+}
+footer > p {
+    color: blueviolet;
+    font-size: 30px;
+}
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 27, 50, 0.8);
+    height: 300px;   
+}
+.contacto > h1 {
+    margin: 0px;
+}
+label[for="email"] {
+    color: whitesmoke;
+}
